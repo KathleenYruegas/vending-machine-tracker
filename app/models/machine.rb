@@ -3,4 +3,8 @@ class Machine < ApplicationRecord
   has_many :snacks
 
   belongs_to :owner
+
+  def avg_snack_price
+    snacks.average(:price)
+  end
 end
