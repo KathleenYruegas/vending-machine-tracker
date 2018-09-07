@@ -4,5 +4,7 @@
 <p>Locations: <% @snack.machines.each do |machine| %><p>
   <ul>
     <li><%= machine.location %></li>
+    <li>$<%= machine.avg_snack_price %></li>
+    <li><%= machine.snacks.count %></li>
   </ul>
     <% end %>

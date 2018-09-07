@@ -26,7 +26,9 @@ describe "As a user" do
 
       visit snack_path(snack)
 
-      expect(page).to have_content("#{machine_1.location}\n#{machine_2.location}\n#{machine_3.location}")
+      expect(page).to have_content("#{machine_1.location} $#{machine_1.avg_snack_price} #{machine_1.snacks.count}")
+      expect(page).to have_content("#{machine_2.location} $#{machine_2.avg_snack_price} #{machine_2.snacks.count}")
+      expect(page).to have_content("#{machine_3.location} $#{machine_3.avg_snack_price} #{machine_3.snacks.count}")
     end
   end
 end
