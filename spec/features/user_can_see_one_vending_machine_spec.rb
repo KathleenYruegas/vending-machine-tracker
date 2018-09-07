@@ -11,12 +11,12 @@ describe "As a user" do
 
       visit machine_path(machine)
 
-      expect(page).to have_content(snack_1.name)
-      expect(page).to have_content(snack_1.price)
-      expect(page).to have_content(snack_2.name)
-      expect(page).to have_content(snack_2.price)
-      expect(page).to have_content(snack_3.name)
-      expect(page).to have_content(snack_3.price)
+      expect(page).to have_content("Snack: #{snack_1.name}")
+      expect(page).to have_content("Price: $#{snack_1.price}")
+      expect(page).to have_content("Snack: #{snack_2.name}")
+      expect(page).to have_content("Price: $#{snack_2.price}")
+      expect(page).to have_content("Snack: #{snack_3.name}")
+      expect(page).to have_content("Price: $#{snack_3.price}")
     end
   end
 end
